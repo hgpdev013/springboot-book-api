@@ -1,0 +1,29 @@
+<html lang="PT-BR" xmlns:th="http//www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Livros</title>
+</head>
+
+<body>
+<div >
+    <h1 style="color: rgb(238,67,67)"> Lista de livros: </h1>
+</div>
+<hr>
+<table>
+    <thead>
+    <tr style="color: #ce56cd">
+        <th>Nome</th>
+        <th>Autor</th>
+        <th>Gênero</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="color: #e74204;" th:each="book:${books}">
+        <td th:text="${book.name}">Nome</td>
+        <td th:text="${book.author}">Autor</td>
+        <td th:text="${book.gender}">Gênero</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
